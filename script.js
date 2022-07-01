@@ -2,7 +2,7 @@ const city = document.getElementById ('city');
 const dateEl = document.getElementById ('date');
 const tempEl = document.getElementById ('temp');
 const weatherEl = document.getElementById ('weather');
-const weatherItem = document.querySelector ('weather-item');
+const weatherItem = document.querySelector ('weather-info');
 
 const API_KEY = '734dfb31bce7daf473e8a526d99d3812';
 
@@ -31,9 +31,25 @@ async function getResponse () {
        .then (data => {
             console.log(data);
             city.innerHTML = data.timezone;
+            tempEl.innerHTML = Math.floor (data.current.temp);
         });
        
     });
 }
 
+
+// function showWeatherItems (data) {
+//     let {
+//         temp
+//     } = data.current;
+
+
+// weatherItem.innerHTML = 
+// `
+// <div class="weather-item">
+//         <div>temp</div>
+//         <div>${temp}%</div>
+//     </div>
+// `;
+// } 
 
