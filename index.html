@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="location"> 
+                <img id="map" src="https://dbayu.com.ua/wp-content/uploads/2020/09/marker.png">
+                <div class="city" id="city"></div>
+            </div>
+            <div class="notification">
+                <img src="https://flaticons.net/icon.php?slug_category=science-technology&slug_icon=bell" id="notification">
+            </div>
+        </div>
+        <div class="weather-icon">
+            <img src="">
+        </div>
+        <div class="weather-info">
+            <div class="weather-item">
+                <div class="date" id="date"> 
+                    Today, 12 September
+                </div>
+                <div class="temp" id="temp">
+                    29 <span>°</span>
+                </div>
+                <div class="weather" id="weather">
+                    Cloudy
+                </div>   
+                <div class="weather-item-plus">
+                    <div class="wind"> 10 <span>km/h</span></div>
+                    <div class="hum"> 54 <span>%</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+  background: rgb(119, 181, 231);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 40px 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.header .location {
+  display: inline-flex;
+}
+.header #map {
+  height: 15px;
+  width: 10px;
+}
+.header #notification {
+  height: 15px;
+  width: 15px;
+}
+.header .city {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16.7806px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
+  padding-left: 15px;
+}
+
+.weather-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 253px;
+}
+
+.weather-item {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 65px;
+  position: absolute;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: 2px;
+  border-radius: 13.9839px;
+}
+.weather-item .date {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.5855px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+.weather-item .temp {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 69.9193px;
+  line-height: 89px;
+  color: #FFFFFF;
+  text-shadow: -2.79677px 5.59354px 34.9597px rgba(0, 0, 0, 0.1);
+}
+.weather-item .humidity {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16.7806px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
+  margin-bottom: 18px;
+}
