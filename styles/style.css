@@ -39,6 +39,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 120px;
+  background-image: "http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png";
 }
 
 .weather-info {
@@ -48,10 +49,6 @@ body {
 }
 
 .weather-item {
-  display: block;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 65px;
   position: absolute;
   display: block;
   justify-content: center;
@@ -61,8 +58,15 @@ body {
   border: 2px;
   border-radius: 13.9839px;
 }
+.weather-item .weather-main {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 65px;
+}
 .weather-item .date {
   font-family: "Overpass";
+  align-items: center;
   font-style: normal;
   font-weight: 400;
   font-size: 12.5855px;
@@ -73,6 +77,7 @@ body {
 }
 .weather-item .temp {
   font-family: "Overpass";
+  align-items: center;
   font-style: normal;
   font-weight: 400;
   font-size: 69.9193px;
@@ -80,8 +85,9 @@ body {
   color: #FFFFFF;
   text-shadow: -2.79677px 5.59354px 34.9597px rgba(0, 0, 0, 0.1);
 }
-.weather-item .humidity {
+.weather-item .weather {
   font-family: "Overpass";
+  align-items: center;
   font-style: normal;
   font-weight: 700;
   font-size: 16.7806px;
@@ -89,4 +95,35 @@ body {
   color: #FFFFFF;
   text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
   margin-bottom: 18px;
+}
+
+.weather-item-plus {
+  display: flexbox;
+}
+.weather-item-plus .wind {
+  display: block;
+}
+.weather-item-plus .wind span {
+  padding: 10px;
+}
+.weather-item-plus #wind-icon {
+  height: 15px;
+  width: 20px;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+.weather-item-plus #wind-num {
+  display: inline;
+}
+.weather-item-plus .hum {
+  display: block;
+}
+.weather-item-plus .hum span {
+  padding: 10px;
+}
+.weather-item-plus #hum-icon {
+  height: 15px;
+  width: 20px;
+  align-items: flex-start;
+  padding-left: 40px;
 }
