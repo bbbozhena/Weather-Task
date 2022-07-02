@@ -105,6 +105,13 @@ body {
 }
 .weather-item-plus .wind span {
   padding: 10px;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.5855px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
 }
 .weather-item-plus #wind-icon {
   height: 15px;
@@ -114,16 +121,29 @@ body {
 }
 .weather-item-plus #wind-num {
   display: inline;
+  padding-left: 48px;
 }
 .weather-item-plus .hum {
   display: block;
+  padding-bottom: 20px;
 }
 .weather-item-plus .hum span {
   padding: 10px;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.5855px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
 }
 .weather-item-plus #hum-icon {
   height: 15px;
   width: 20px;
   align-items: flex-start;
   padding-left: 40px;
+}
+.weather-item-plus #hum-num {
+  display: inline;
+  padding-left: 50px;
 }

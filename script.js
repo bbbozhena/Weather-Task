@@ -4,6 +4,9 @@ const tempEl = document.getElementById ('temp');
 const weatherEl = document.getElementById ('weather');
 const weatherItem = document.querySelector ('weather-info');
 const weatherIcon = document.getElementById ('weather-icon');
+const windNum = document.getElementById ('wind-num');
+const humNum = document.getElementById ('hum-num');
+
 
 const API_KEY = '734dfb31bce7daf473e8a526d99d3812';
 
@@ -34,6 +37,9 @@ async function getResponse () {
             city.innerHTML = data.timezone;
             tempEl.innerHTML = Math.floor (data.current.temp) + '°';
             weatherEl.innerHTML = data.current ['weather'][0]['main'];
+            windNum.innerHTML = Math.floor (data.current ['wind_speed']) + ' km/h';
+            humNum.innerHTML =  data.current['humidity'] + ' %';
+
         });
        
     });

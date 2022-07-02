@@ -114,6 +114,13 @@ body {
 
         & span {
             padding: 10px;
+            font-family: 'Overpass';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12.5855px;
+            line-height: 16px;
+            color: #FFFFFF;
+            text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
         }
     
     }
@@ -126,13 +133,22 @@ body {
     }
     #wind-num {
         display: inline;
+        padding-left: 48px;
         
     }
     .hum {
         display: block;
+        padding-bottom: 20px;
 
         & span {
             padding: 10px;
+            font-family: 'Overpass';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12.5855px;
+            line-height: 16px;
+            color: #FFFFFF;
+            text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
         }
        
     }
@@ -141,5 +157,11 @@ body {
         width: 20px;
         align-items: flex-start;
         padding-left: 40px;
+    }
+    #hum-num {
+        display: inline;
+        padding-left: 50px;
+       
+
     }
 }
