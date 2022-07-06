@@ -1,18 +1,14 @@
-
-
 $mainColor: rgb(119, 181, 231);
 
-
 body {
-  background: $mainColor;
-  margin: 0;
-  padding: 0;
+    background: $mainColor;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     padding: 40px 50px;
 }
-
 
 .header {
     display: flex;
@@ -23,41 +19,40 @@ body {
         display: inline-flex;
     }
 
-        & #map {
-            height: 15px;
-            width: 10px;
-        }
-            & #notification {
-                height: 15px;
-                width: 15px;
-            }
-                & .city {
-                    font-family: 'Overpass';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 16.7806px;
-                    line-height: 21px;
-                    color: #FFFFFF;
-                    text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
-                    padding-left: 15px;
-                    }
+    & #map {
+        height: 15px;
+        width: 10px;
+    }
+    & #notification {
+        height: 15px;
+        width: 15px;
+    }
+    & .city {
+        font-family: "Overpass";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16.7806px;
+        line-height: 21px;
+        color: #ffffff;
+        text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
+        padding-left: 15px;
+    }
 }
 .weather-icon {
     display: flex;
     justify-content: center;
     margin-top: 120px;
-    background-image: 'http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png';
-
+    background-image: "http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png";
 }
-.weather-info{
+.weather-info {
     display: flex;
     justify-content: center;
-    margin-top: 253px ;
+    margin-top: 253px;
 }
- .weather-item {
+.weather-item {
     position: absolute;
     display: block;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.3);
     color: white;
@@ -71,70 +66,65 @@ body {
     }
 
     & .date {
-        font-family: 'Overpass';
+        font-family: "Overpass";
         align-items: center;
         font-style: normal;
         font-weight: 400;
         font-size: 12.5855px;
         line-height: 16px;
-        color: #FFFFFF;
+        color: #ffffff;
         text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
         margin-bottom: 15px;
-            }
-            & .temp {
-            font-family: 'Overpass';
-            align-items: center;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 69.9193px;
-            line-height: 89px;
-            color: #FFFFFF;
-            text-shadow: -2.79677px 5.59354px 34.9597px rgba(0, 0, 0, 0.1);
-                        }
-                        & .weather {
-                        font-family: 'Overpass';
-                        align-items: center;
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 16.7806px;
-                        line-height: 21px;
-                        color: #FFFFFF;
-                        text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
-                        margin-bottom: 18px;
-                        }
+    }
+    & .temp {
+        font-family: "Overpass";
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 69.9193px;
+        line-height: 89px;
+        color: #ffffff;
+        text-shadow: -2.79677px 5.59354px 34.9597px rgba(0, 0, 0, 0.1);
+    }
+    & .weather {
+        font-family: "Overpass";
+        align-items: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16.7806px;
+        line-height: 21px;
+        color: #ffffff;
+        text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
+        margin-bottom: 18px;
+    }
 }
-
 
 .weather-item-plus {
     display: flexbox;
-   
-    
+
     .wind {
         display: block;
 
         & span {
             padding: 10px;
-            font-family: 'Overpass';
+            font-family: "Overpass";
             font-style: normal;
             font-weight: 400;
             font-size: 12.5855px;
             line-height: 16px;
-            color: #FFFFFF;
+            color: #ffffff;
             text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
         }
-    
     }
     & #wind-icon {
         height: 15px;
         width: 20px;
         align-items: flex-start;
         padding-left: 40px;
-
     }
     #wind-num {
         display: inline;
         padding-left: 48px;
-        
     }
     .hum {
         display: block;
@@ -142,15 +132,14 @@ body {
 
         & span {
             padding: 10px;
-            font-family: 'Overpass';
+            font-family: "Overpass";
             font-style: normal;
             font-weight: 400;
             font-size: 12.5855px;
             line-height: 16px;
-            color: #FFFFFF;
+            color: #ffffff;
             text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
         }
-       
     }
     & #hum-icon {
         height: 15px;
@@ -161,7 +150,5 @@ body {
     #hum-num {
         display: inline;
         padding-left: 50px;
-       
-
     }
 }
