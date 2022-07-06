@@ -18,48 +18,37 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
 
 
-    const time = new Date ();
-    const month = time.getMonth();
-    const date =  time.getDate();
-    const day = time.getDay();
+const time = new Date ();
+const month = time.getMonth();
+const date =  time.getDate();
+const day = time.getDay();
 
-    dateEl.innerHTML = days [day] + ', ' + date + ' ' + months[month];
-
- 
-   
-
+dateEl.innerHTML = days [day] + ', ' + date + ' ' + months[month];
 
  
-getGeo ();
+    
 
-function getGeo () {
-    navigator.geolocation.getCurrentPosition ((success) => {
-        let {latitude, longitude} = success.coords;
-   
-        getWeather (latitude, longitude);
-       
-         });
-            
-        }
-
-
-       
 let options = {
-    timeout: 1000
+    timeout: 3500
 };
 
-function success(pos) {
+function success (pos) {
     let crd = pos.coords;
 
-    getWeather (`${crd.latitude} ${crd.longitude} `);
-    
+    getWeather(crd.latitude, crd.longitude);
 }
- function error() {
-     getWeather(51.509865, -0.118092 );
- }
 
- navigator.geolocation.getCurrentPosition(success, error, options);
-    
+
+function error(err) {
+    getWeather(51.509865, -0.118092 );
+     }
+
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
+
+
+
     
 
 
