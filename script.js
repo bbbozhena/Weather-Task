@@ -42,9 +42,7 @@ const day = time.getDay();
 
 dateEl.innerHTML = days[day] + ", " + date + " " + months[month];
 
-let options = {
-  timeout: 3500,
-};
+
 
 function success(pos) {
   let crd = pos.coords;
@@ -56,7 +54,7 @@ function error(err) {
   getWeather(51.509865, -0.118092);
 }
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+navigator.geolocation.getCurrentPosition(success, error);
 
 function getWeather(latitude, longitude) {
   fetch(
