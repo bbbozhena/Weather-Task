@@ -42,8 +42,6 @@ const day = time.getDay();
 
 dateEl.innerHTML = days[day] + ", " + date + " " + months[month];
 
-
-
 function success(pos) {
   let crd = pos.coords;
 
@@ -78,5 +76,10 @@ function getWeather(latitude, longitude) {
       if (humNum) {
         humNum.innerHTML = data.current["humidity"] + " %";
       }
+      let icon = (weatherIcon.innerHTML = data.current["weather"][0]["icon"]);
+
+      weatherIcon.innerHTML = `
+      <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
+      `;
     });
 }
