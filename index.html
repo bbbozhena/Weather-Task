@@ -1,61 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <div class="location"> 
-                <img id="map" src="https://dbayu.com.ua/wp-content/uploads/2020/09/marker.png">
-                <div class="city" id="city"></div>
-            </div>
-            <div class="notification">
-                <img src="https://flaticons.net/icon.php?slug_category=science-technology&slug_icon=bell" id="notification">
-            </div>
+      <div class="header">
+        <div class="location">
+          <img
+            id="map"
+            src="https://dbayu.com.ua/wp-content/uploads/2020/09/marker.png"
+          />
+          <div class="city" id="city"></div>
         </div>
-        <div class="weather-icon" id="weather-icon">
-            <img src="">
+        <div class="notification">
+          <img
+            src="https://flaticons.net/icon.php?slug_category=science-technology&slug_icon=bell"
+            id="notification"
+          />
         </div>
+      </div>
+      <div class="weather-icon" id="weather-icon">
+        <img src="" />
+      </div>
+      <div class="weather-general">
         <div class="weather-info">
-            <div class="weather-item">
-                <div class="weather-main">
-                <div class="date" id="date"> 
-                    Today, 12 September
-                </div>
-                <div class="temp" id="temp">
-                     <span>°</span>
-                </div>
-                <div class="weather" id="weather">
-                    Cloudy
-                </div>   
+          <div class="weather-item">
+            <div class="weather-main">
+              <div class="date" id="date">Today, 12 September</div>
+              <div class="temp" id="temp">
+                <span>°</span>
+              </div>
+              <div class="weather" id="weather">Cloudy</div>
             </div>
-                <div class="weather-item-plus">
-                    <div class="wind">
-                        <img src="https://cdn-icons-png.flaticon.com/512/136/136712.png" id="wind-icon">
-                        <span> Wind</span>
-                        <div id="wind-num">1</div>
-                    </div>
-                    <div class="hum"> 
-                        <img src="https://flaticons.net/icon.php?slug_category=food&slug_icon=water-drop" id="hum-icon">
-                        <span> Hum </span>
-                        <div id="hum-num">1</div>
-                    </div>
-                </div>
-                   
-                </div>
+            <div class="weather-item-plus">
+              <div class="wind">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/136/136712.png"
+                  id="wind-icon"
+                />
+                <span> Wind</span>
+                <div id="wind-num">1</div>
+              </div>
+              <div class="hum">
+                <img
+                  src="https://flaticons.net/icon.php?slug_category=food&slug_icon=water-drop"
+                  id="hum-icon"
+                />
+                <span> Hum </span>
+                <div id="hum-num">1</div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="weather-other-day">
+          <div class="hourly-block">
+            <div class="hourly-temp">21</div>
+            <div class="hourly-icon"></div>
+            <div class="hourly-time">12</div>
+          </div>
 
+          <div class="hourly-block">
+            <div class="hourly-temp">21</div>
+            <div class="hourly-icon"></div>
+            <div class="hourly-time">12</div>
+          </div>
+
+          <div class="hourly-block">
+            <div class="hourly-temp">21</div>
+            <div class="hourly-icon"></div>
+            <div class="hourly-time">12</div>
+          </div>
+
+          <div class="hourly-block">
+            <div class="hourly-temp">21</div>
+            <div class="hourly-icon"></div>
+            <div class="hourly-time">12</div>
+          </div>
+
+          <div class="hourly-block">
+            <div class="hourly-temp">21</div>
+            <div class="hourly-icon"></div>
+            <div class="hourly-time">12</div>
+          </div>
+
+          <div class="hourly-block">
+            <div class="hourly-temp">21</div>
+            <div class="hourly-icon"></div>
+            <div class="hourly-time">12</div>
+          </div>
+
+          <div class="hourly-block">
+            <div class="hourly-temp">21</div>
+            <div class="hourly-icon"></div>
+            <div class="hourly-time">12</div>
+          </div>
+
+          <div class="hourly-block">
+            <div class="hourly-temp">21</div>
+            <div class="hourly-icon"></div>
+            <div class="hourly-time">12</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

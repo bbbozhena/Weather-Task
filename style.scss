@@ -38,17 +38,20 @@ body {
         padding-left: 15px;
     }
 }
+.weather-general {
+    display: flex;
+    justify-content: space-between;
+}
 .weather-icon {
     display: flex;
     justify-content: flex-start;
-    margin-top: 120px;
+    margin-top: 100px;
     height: 200px;
     width: 220px;
 }
 .weather-info {
     display: flex;
     justify-content: flex-start;
-    margin-top: 60px;
 }
 .weather-item {
     position: absolute;
@@ -78,6 +81,7 @@ body {
         color: #ffffff;
         text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
         margin-bottom: 15px;
+        margin-left: 25%;
     }
     & .temp {
         font-family: "Overpass";
@@ -99,6 +103,7 @@ body {
         color: #ffffff;
         text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
         margin-bottom: 18px;
+        margin-left: 25%;
     }
 }
 
@@ -154,4 +159,19 @@ body {
         display: inline;
         padding-left: 50px;
     }
+}
+
+.weather-other-day {
+    display: flex;
+    margin-top: 5%;
+}
+.hourly-block {
+    display: block;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1.4px solid;
+    border-color: white;
+    border-radius: 13.9839px;
+    padding: 40px;
+    margin-left: 15px;
 }
