@@ -82,7 +82,7 @@ function getWeather(latitude, longitude) {
         city.innerHTML = data.timezone;
       }
       if (tempEl) {
-        tempEl.innerHTML = Math.floor(data.current.temp) + "°";
+        tempEl.innerHTML = Math.floor(data.current.temp / 10) + "°";
       }
       if (weatherEl) {
         weatherEl.innerHTML = data.current["weather"][0]["main"];
@@ -100,7 +100,7 @@ function getWeather(latitude, longitude) {
       `;
 
       if (hourlyTempOne) {
-        hourlyTempOne.innerHTML = Math.floor(data.hourly[1]["temp"]) + "°";
+        hourlyTempOne.innerHTML = Math.floor(data.hourly[1]["temp"] / 10) + "°";
       }
 
       if (hourlyIconOne) {
@@ -115,7 +115,7 @@ function getWeather(latitude, longitude) {
       }
 
       if (hourlyTempTwo) {
-        hourlyTempTwo.innerHTML = Math.floor(data.hourly[2]["temp"]) + "°";
+        hourlyTempTwo.innerHTML = Math.floor(data.hourly[2]["temp"] / 10) + "°";
       }
       if (hourlyIconTwo) {
         hourlyIconTwo.innerHTML = data.hourly[2]["weather"][0]["icon"];
@@ -128,7 +128,8 @@ function getWeather(latitude, longitude) {
       }
 
       if (hourlyTempThree) {
-        hourlyTempThree.innerHTML = Math.floor(data.hourly[2]["temp"]) + "°";
+        hourlyTempThree.innerHTML =
+          Math.floor(data.hourly[2]["temp"] / 10) + "°";
       }
       if (hourlyIconThree) {
         hourlyIconThree.innerHTML = data.hourly[2]["weather"][0]["icon"];
@@ -141,7 +142,8 @@ function getWeather(latitude, longitude) {
       }
 
       if (hourlyTempFour) {
-        hourlyTempFour.innerHTML = Math.floor(data.hourly[2]["temp"]) + "°";
+        hourlyTempFour.innerHTML =
+          Math.floor(data.hourly[2]["temp"] / 10) + "°";
       }
       if (hourlyIconFour) {
         hourlyIconFour.innerHTML = data.hourly[2]["weather"][0]["icon"];
@@ -154,7 +156,8 @@ function getWeather(latitude, longitude) {
       }
 
       if (hourlyTempFive) {
-        hourlyTempFive.innerHTML = Math.floor(data.hourly[2]["temp"]) + "°";
+        hourlyTempFive.innerHTML =
+          Math.floor(data.hourly[2]["temp"] / 10) + "°";
       }
       if (hourlyIconFive) {
         hourlyIconFive.innerHTML = data.hourly[2]["weather"][0]["icon"];
