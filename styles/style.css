@@ -158,16 +158,40 @@ body {
 
 .weather-other-day {
   display: flex;
-  margin-top: 5%;
+  margin-top: 30px;
 }
 
 .hourly-block {
   display: block;
+  align-items: center;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.3);
   color: white;
   border: 1.4px solid;
   border-color: white;
   border-radius: 13.9839px;
-  padding: 40px;
+  padding: 30px;
   margin-left: 15px;
+}
+
+.hourly-temp {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24;
+  line-height: 13px;
+  color: #ffffff;
+  text-shadow: -1.13852px 1.70778px 0.569258px rgba(0, 0, 0, 0.1);
+  margin-left: 40%;
+}
+
+.hourly-time {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24;
+  line-height: 13px;
+  color: #ffffff;
+  text-shadow: -1.13852px 1.70778px 0.569258px rgba(0, 0, 0, 0.1);
+  margin-left: 40%;
 }
