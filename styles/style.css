@@ -1,7 +1,12 @@
+html, body {
+  height: 100vh;
+}
+
 body {
-  background: rgb(119, 181, 231);
   margin: 0;
   padding: 0;
+  background: linear-gradient(192.05deg, #47BFDF 0%, #4A91FF 100%) no-repeat;
+  box-shadow: -3.77069px 7.54137px 30.1655px 2.26241px rgba(19, 35, 78, 0.2);
 }
 
 .container {
@@ -84,13 +89,11 @@ body {
 }
 .weather-item .temp {
   font-family: "Overpass";
-  align-items: center;
   font-style: normal;
   font-weight: 400;
   font-size: 69.9193px;
-  line-height: 89px;
-  color: #ffffff;
-  text-shadow: -2.79677px 5.59354px 34.9597px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding-left: 20px;
 }
 .weather-item .weather {
   font-family: "Overpass";
@@ -166,6 +169,7 @@ body {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.3);
+  border-radius: 11.3852px;
   color: white;
   border: 1.4px solid;
   border-color: white;
