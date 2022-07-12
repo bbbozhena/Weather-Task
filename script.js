@@ -12,6 +12,22 @@ let hourlyBlock = document.getElementById("hourly-block");
 const hourlyTemp = document.getElementById("hourly-temp");
 const hourlyIcon = document.getElementById("hourly-icon");
 const hourlyTime = document.getElementById("hourly-time");
+let otherWeather = document.querySelectorAll("weather-other-day");
+
+const arrayTemp = [
+  document.getElementById("hourly-temp1"),
+  document.getElementById("hourly-temp2"),
+  document.getElementById("hourly-temp3"),
+  document.getElementById("hourly-temp4"),
+  document.getElementById("hourly-temp5"),
+];
+const arrayIcon = [
+  document.getElementById("hourly-icon1"),
+  document.getElementById("hourly-icon2"),
+  document.getElementById("hourly-icon3"),
+  document.getElementById("hourly-icon4"),
+  document.getElementById("hourly-icon5"),
+];
 
 const API_KEY = "734dfb31bce7daf473e8a526d99d3812";
 
@@ -91,88 +107,14 @@ function showWeather(data) {
   <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
   `;
 
-  if (hourlyTemp) {
-    hourlyTemp.innerHTML = Math.floor(data.hourly[1]["temp"] / 10) + "°";
-  }
+  data.hourly.slice(0, 5).map((hourlyData, index) => {
+    arrayTemp[index].innerHTML = hourlyData.temp;
+  });
 
-  if (hourlyIcon) {
-    hourlyIcon.innerHTML = data.hourly[1]["weather"][0]["icon"];
-  }
-  hourlyIcon.innerHTML = `
-  <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
+  data.hourly.slice(0, 5).map((iconData, index) => {
+    arrayIcon[index].innerHTML = data.hourly[1]["weather"][0]["icon"];
+    arrayIcon[index].innerHTML = `
+  <img src= 'http://openweathermap.org/img/wn/${icon}@2x.png'>
   `;
-
-  if (hourlyTime) {
-    hourlyTime.innerHTML = time.getHours() + 1;
-  }
-
-  // if (hourlyTempOne) {
-  //   hourlyTempOne.innerHTML = Math.floor(data.hourly[1]["temp"] / 10) + "°";
-  // }
-
-  // if (hourlyIconOne) {
-  //   hourlyIconOne.innerHTML = data.hourly[1]["weather"][0]["icon"];
-  // }
-  // hourlyIconOne.innerHTML = `
-  // <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
-  // `;
-
-  // if (hourlyTimeOne) {
-  //   hourlyTimeOne.innerHTML = time.getHours() + 1;
-  // }
-
-  // if (hourlyTempTwo) {
-  //   hourlyTempTwo.innerHTML = Math.floor(data.hourly[2]["temp"] / 10) + "°";
-  // }
-  // if (hourlyIconTwo) {
-  //   hourlyIconTwo.innerHTML = data.hourly[2]["weather"][0]["icon"];
-  // }
-  // hourlyIconTwo.innerHTML = `
-  // <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
-  // `;
-  // if (hourlyTimeTwo) {
-  //   hourlyTimeTwo.innerHTML = time.getHours() + 2;
-  // }
-
-  // if (hourlyTempThree) {
-  //   hourlyTempThree.innerHTML =
-  //     Math.floor(data.hourly[2]["temp"] / 10) + "°";
-  // }
-  // if (hourlyIconThree) {
-  //   hourlyIconThree.innerHTML = data.hourly[2]["weather"][0]["icon"];
-  // }
-  // hourlyIconThree.innerHTML = `
-  // <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
-  // `;
-  // if (hourlyTimeThree) {
-  //   hourlyTimeThree.innerHTML = time.getHours() + 3;
-  // }
-
-  // if (hourlyTempFour) {
-  //   hourlyTempFour.innerHTML =
-  //     Math.floor(data.hourly[2]["temp"] / 10) + "°";
-  // }
-  // if (hourlyIconFour) {
-  //   hourlyIconFour.innerHTML = data.hourly[2]["weather"][0]["icon"];
-  // }
-  // hourlyIconFour.innerHTML = `
-  // <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
-  // `;
-  // if (hourlyTimeFour) {
-  //   hourlyTimeFour.innerHTML = time.getHours() + 4;
-  // }
-
-  // if (hourlyTempFive) {
-  //   hourlyTempFive.innerHTML =
-  //     Math.floor(data.hourly[2]["temp"] / 10) + "°";
-  // }
-  // if (hourlyIconFive) {
-  //   hourlyIconFive.innerHTML = data.hourly[2]["weather"][0]["icon"];
-  // }
-  // hourlyIconFive.innerHTML = `
-  // <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
-  // `;
-  // if (hourlyTimeFive) {
-  //   hourlyTimeFive.innerHTML = time.getHours() + 5;
-  // }
+  });
 }
