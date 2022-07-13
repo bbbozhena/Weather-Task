@@ -99,7 +99,7 @@ function showWeather(data) {
     weatherEl.innerHTML = data.current["weather"][0]["main"];
   }
   if (windNum) {
-    windNum.innerHTML = Math.floor(data.current["wind_speed"]) + "km/h";
+    windNum.innerHTML = Math.floor(data.current["wind_speed"]) + " km/h";
   }
   if (humNum) {
     humNum.innerHTML = data.current["humidity"] + " %";
@@ -110,18 +110,18 @@ function showWeather(data) {
   <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
   `;
 
-  data.hourly.slice(0, 5).map((hourlyData, index) => {
-    arrayTemp[index].innerHTML = hourlyData.temp;
+  data.hourly.slice(1, 6).map((hourlyData, index) => {
+    arrayTemp[index].innerHTML = Math.floor(hourlyData.temp) + "°";
   });
 
-  data.hourly.slice(0, 5).map((iconData, index) => {
+  data.hourly.slice(1, 6).map((iconData, index) => {
     arrayIcon[index].innerHTML = iconData.icon;
     arrayIcon[index].innerHTML = `
   <img src= 'http://openweathermap.org/img/wn/${icon}@2x.png'>
   `;
   });
 
-  data.hourly.slice(0, 5).map((timeData, index) => {
-    arrayHour[index].innerHTML = timeData.dt;
+  data.hourly.slice(1, 6).map((timeData, index) => {
+    arrayHour[index].innerHTML = window.moment(timeData.dt * 1000).format("H");
   });
 }
