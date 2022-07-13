@@ -79,7 +79,7 @@ navigator.geolocation.getCurrentPosition(success, error);
 
 function getWeather(latitude, longitude) {
   fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${API_KEY}&units=metric`
   )
     .then((res) => res.json())
     .then((data) => {
