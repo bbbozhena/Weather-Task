@@ -8,11 +8,6 @@ const weatherItem = document.querySelector("weather-info");
 const weatherIcon = document.getElementById("weather-icon");
 const windNum = document.getElementById("wind-num");
 const humNum = document.getElementById("hum-num");
-let hourlyBlock = document.getElementById("hourly-block");
-const hourlyTemp = document.getElementById("hourly-temp");
-const hourlyIcon = document.getElementById("hourly-icon");
-const hourlyTime = document.getElementById("hourly-time");
-let otherWeather = document.querySelectorAll("weather-other-day");
 
 const arrayTemp = [
   document.getElementById("hourly-temp1"),
@@ -27,6 +22,14 @@ const arrayIcon = [
   document.getElementById("hourly-icon3"),
   document.getElementById("hourly-icon4"),
   document.getElementById("hourly-icon5"),
+];
+
+const arrayHour = [
+  document.getElementById("hourly-time1"),
+  document.getElementById("hourly-time2"),
+  document.getElementById("hourly-time3"),
+  document.getElementById("hourly-time4"),
+  document.getElementById("hourly-time5"),
 ];
 
 const API_KEY = "734dfb31bce7daf473e8a526d99d3812";
@@ -90,7 +93,7 @@ function showWeather(data) {
     city.innerHTML = data.timezone;
   }
   if (tempEl) {
-    tempEl.innerHTML = Math.floor(data.current.temp / 10) + "°";
+    tempEl.innerHTML = Math.floor(data.current.temp) + "°";
   }
   if (weatherEl) {
     weatherEl.innerHTML = data.current["weather"][0]["main"];
@@ -112,9 +115,13 @@ function showWeather(data) {
   });
 
   data.hourly.slice(0, 5).map((iconData, index) => {
-    arrayIcon[index].innerHTML = data.hourly[1]["weather"][0]["icon"];
+    arrayIcon[index].innerHTML = iconData.icon;
     arrayIcon[index].innerHTML = `
   <img src= 'http://openweathermap.org/img/wn/${icon}@2x.png'>
   `;
+  });
+
+  data.hourly.slice(0, 5).map((timeData, index) => {
+    arrayHour[index].innerHTML = timeData.dt;
   });
 }
