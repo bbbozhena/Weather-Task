@@ -8,29 +8,10 @@ const weatherItem = document.querySelector("weather-info");
 const weatherIcon = document.getElementById("weather-icon");
 const windNum = document.getElementById("wind-num");
 const humNum = document.getElementById("hum-num");
-
-const arrayTemp = [
-  document.getElementById("hourly-temp1"),
-  document.getElementById("hourly-temp2"),
-  document.getElementById("hourly-temp3"),
-  document.getElementById("hourly-temp4"),
-  document.getElementById("hourly-temp5"),
-];
-const arrayIcon = [
-  document.getElementById("hourly-icon1"),
-  document.getElementById("hourly-icon2"),
-  document.getElementById("hourly-icon3"),
-  document.getElementById("hourly-icon4"),
-  document.getElementById("hourly-icon5"),
-];
-
-const arrayHour = [
-  document.getElementById("hourly-time1"),
-  document.getElementById("hourly-time2"),
-  document.getElementById("hourly-time3"),
-  document.getElementById("hourly-time4"),
-  document.getElementById("hourly-time5"),
-];
+const todayDate = document.getElementById("today-date-num");
+const hourlyTemp = [...document.getElementsByClassName("hourly-temp")];
+const hourlyIcon = [...document.getElementsByClassName("hourly-icon")];
+const hourlyTime = [...document.getElementsByClassName("hourly-time")];
 
 const API_KEY = "734dfb31bce7daf473e8a526d99d3812";
 
@@ -64,6 +45,7 @@ const date = time.getDate();
 const day = time.getDay();
 
 dateEl.innerHTML = days[day] + ", " + date + " " + months[month];
+todayDate.innerHTML = date + " " + months[month];
 
 function success(pos) {
   let crd = pos.coords;
@@ -110,18 +92,24 @@ function showWeather(data) {
   <img src=' http://openweathermap.org/img/wn/${icon}@2x.png'>
   `;
 
-  data.hourly.slice(1, 6).map((hourlyData, index) => {
-    arrayTemp[index].innerHTML = Math.floor(hourlyData.temp) + "°";
-  });
+  [...document.getElementsByClassName("hourly-block")].forEach(
+    (element, index, array) => {
+      data.hourly.slice(1, 6).map((hourlyData, index) => {
+        hourlyTemp[index].innerHTML = Math.floor(hourlyData.temp) + "°";
+      });
+    }
+  );
 
   data.hourly.slice(1, 6).map((iconData, index) => {
-    arrayIcon[index].innerHTML = iconData.icon;
-    arrayIcon[index].innerHTML = `
-  <img src= 'http://openweathermap.org/img/wn/${icon}@2x.png'>
-  `;
+    hourlyIcon[index].innerHTML = iconData.icon;
+    hourlyIcon[index].innerHTML = `
+    <img src= 'http://openweathermap.org/img/wn/${icon}@2x.png'>
+    `;
   });
 
   data.hourly.slice(1, 6).map((timeData, index) => {
-    arrayHour[index].innerHTML = window.moment(timeData.dt * 1000).format("H");
+    let timeForecast = (hourlyTime[index].innerHTML = window
+      .moment(timeData.dt * 1000)
+      .format("H"));
   });
 }

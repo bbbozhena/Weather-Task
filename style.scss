@@ -43,10 +43,7 @@ body {
         padding-left: 15px;
     }
 }
-// .weather-general {
-//     display: flex;
-//     justify-content: space-between;
-// }
+
 .weather-icon {
     & img {
         height: 200px;
@@ -54,10 +51,6 @@ body {
     }
 }
 
-// .weather-info {
-//     display: flex;
-//     justify-content: flex-start;
-// }
 .weather-item {
     position: absolute;
     display: block;
@@ -167,15 +160,14 @@ body {
 .weather-other-day {
     display: flex;
     justify-content: center;
-    padding-top: 68px;
+    padding-top: 60px;
 }
 .hourly-block {
     display: block;
     border-radius: 11.3852px;
     color: white;
     border-radius: 13.9839px;
-    padding: 5px;
-    margin-left: 15px;
+
     & span {
         align-items: flex-start;
     }
@@ -206,33 +198,47 @@ body {
 }
 .other-weather-header {
     display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
     & span {
         font-family: "Overpass";
         font-style: normal;
         font-weight: 600;
-        font-size: 13.6622px;
+        font-size: 26px;
         line-height: 17px;
         color: #ffffff;
         text-shadow: -1.13852px 1.70778px 0.569258px rgba(0, 0, 0, 0.1);
     }
 }
-.other-weather-header-icon-back {
-    & #icon-back {
-        height: 15px;
-        width: 15px;
-        padding-right: 7px;
-    }
-}
+// .other-weather-header-icon-back {
+
+//     & #icon-back {
+//         height: 20px;
+//         width: 23px;
+
+//     }
+// }
 .other-weather-header-icon-set {
+    padding-left: 150px;
     & #icon-set {
-        height: 15px;
-        width: 15px;
-        padding-left: 33em;
+        height: 24px;
+        width: 24px;
     }
 }
 .today-date {
     display: flex;
-    padding-top: 28px;
+    justify-content: space-between;
+    padding-bottom: 40px;
+
+    & span {
+        font-family: "Overpass";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 13px;
+        color: #ffffff;
+        text-shadow: -1.13852px 1.70778px 0.569258px rgba(0, 0, 0, 0.1);
+    }
 }
 .today-date-num {
     font-family: "Overpass";
@@ -242,5 +248,25 @@ body {
     line-height: 13px;
     color: #ffffff;
     text-shadow: -1.13852px 1.70778px 0.569258px rgba(0, 0, 0, 0.1);
-    padding-left: 32em;
+}
+
+.next-forecast {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    & span {
+        font-family: "Overpass";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 17px;
+        color: #ffffff;
+        text-shadow: -1.13852px 1.70778px 0.569258px rgba(0, 0, 0, 0.1);
+    }
+}
+.next-forecast-icon {
+    & img {
+        width: 25px;
+        height: 25px;
+    }
 }
