@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100vh;
+  background-size: cover;
 }
 
 body {
@@ -12,6 +12,11 @@ body {
 
 .container {
   padding: 40px 50px;
+}
+
+.weather-general {
+  display: flex;
+  justify-content: space-around;
 }
 
 .header {
@@ -255,4 +260,31 @@ body {
 .next-forecast-icon img {
   width: 25px;
   height: 25px;
+}
+
+.daily-block {
+  display: flex;
+  justify-content: space-between;
+}
+.daily-block .daily-date {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 13px;
+  color: #ffffff;
+  text-shadow: -1.13852px 1.70778px 0.569258px rgba(0, 0, 0, 0.1);
+  padding: 21px;
+  margin-top: 30px;
+}
+.daily-block .daily-temp {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24;
+  line-height: 13px;
+  color: #ffffff;
+  text-shadow: -1.13852px 1.70778px 0.569258px rgba(0, 0, 0, 0.1);
+  padding: 21px;
+  margin-top: 30px;
 }

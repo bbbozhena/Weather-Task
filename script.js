@@ -12,6 +12,9 @@ const todayDate = document.getElementById("today-date-num");
 const hourlyTemp = [...document.getElementsByClassName("hourly-temp")];
 const hourlyIcon = [...document.getElementsByClassName("hourly-icon")];
 const hourlyTime = [...document.getElementsByClassName("hourly-time")];
+const dailyDate = [...document.getElementsByClassName("daily-date")];
+const dailyIcon = [...document.getElementsByClassName("daily-icon")];
+const dailyTemp = [...document.getElementsByClassName("daily-temp")];
 
 const API_KEY = "734dfb31bce7daf473e8a526d99d3812";
 
@@ -97,19 +100,37 @@ function showWeather(data) {
       data.hourly.slice(1, 6).map((hourlyData, index) => {
         hourlyTemp[index].innerHTML = Math.floor(hourlyData.temp) + "°";
       });
+      data.hourly.slice(1, 6).map((iconData, index) => {
+        hourlyIcon[index].innerHTML = iconData.icon;
+        hourlyIcon[index].innerHTML = `
+        <img src= 'http://openweathermap.org/img/wn/${icon}@2x.png'>
+        `;
+      });
+
+      data.hourly.slice(1, 6).map((timeData, index) => {
+        let timeForecast = (hourlyTime[index].innerHTML = window
+          .moment(timeData.dt * 1000)
+          .format("H"));
+      });
     }
   );
 
-  data.hourly.slice(1, 6).map((iconData, index) => {
-    hourlyIcon[index].innerHTML = iconData.icon;
-    hourlyIcon[index].innerHTML = `
-    <img src= 'http://openweathermap.org/img/wn/${icon}@2x.png'>
-    `;
-  });
-
-  data.hourly.slice(1, 6).map((timeData, index) => {
-    let timeForecast = (hourlyTime[index].innerHTML = window
-      .moment(timeData.dt * 1000)
-      .format("H"));
-  });
+  [...document.getElementsByClassName("daily-block")].forEach(
+    (element, index, array) => {
+      data.daily.slice(1, 7).map((dailyData, index) => {
+        dailyDate[index].innerHTML = window
+          .moment(dailyData.dt * 1000)
+          .format("MMM, D");
+      });
+      data.daily.slice(1, 7).map((iconDailyData, index) => {
+        dailyIcon[index].innerHTML = iconDailyData.icon;
+        dailyIcon[index].innerHTML = `
+        <img src= 'http://openweathermap.org/img/wn/${icon}@2x.png'>
+        `;
+      });
+      data.daily.slice(1, 7).map((tempDailyData, index) => {
+        dailyTemp[index].innerHTML = Math.floor(tempDailyData.temp.day) + "°";
+      });
+    }
+  );
 }
